@@ -177,15 +177,21 @@
                   <div class="location_text">
                      <ul>
                         <li>
-                           <a href="#">
-                           <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">+01 1234567890</span>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#">
-                           <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">demo@gmail.com</span>
-                           </a>
-                        </li>
+
+
+                        {% for item in footer %}
+                        <a href="#">
+                        <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">+{{item.number}}</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#">
+                        <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">{{item.email}}</span>
+                        </a>
+                     </li>
+                     {% endfor %}
+
+
                      </ul>
                   </div>
                   <div class="form-group">

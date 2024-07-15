@@ -20,3 +20,10 @@ class Discord(models.Model):
    name = models.CharField(max_length=50)
    contein = models.TextField()
    img = models.ImageField()
+
+
+class Footer(models.Model):
+   number = models.IntegerField()
+   email = models.EmailField()
+
+

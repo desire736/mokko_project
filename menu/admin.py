@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Publications, Coffees, Discord
+from .models import Publications, Coffees, Discord, Footer
 
 # Register your models here.
 
@@ -15,3 +15,7 @@ class CoffeeAdmin(admin.ModelAdmin):
 @admin.register(Discord)
 class DiscordAdmin(admin.ModelAdmin):
    list_display = ['name']
+
+@admin.register(Footer)
+class AdressAdmin(admin.ModelAdmin):
+   list_display = ['number', 'email']
